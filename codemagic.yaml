@@ -5,20 +5,13 @@ workflows:
     instance_type: mac_mini_m2
 
     scripts:
-      - name: Extract project
-        script: |
-          rm -rf android_project
-          mkdir android_project
-          unzip -q FriendsSoftSMSServer_Codemagic.zip -d android_project
-
       - name: Set Android SDK
         script: |
-          echo "sdk.dir=$ANDROID_SDK_ROOT" > android_project/local.properties
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
 
       - name: Build APK
         script: |
-          cd android_project
           gradle :app:assembleDebug
 
     artifacts:
-      - android_project/app/build/outputs/apk/debug/*.apk
+      - app/build/outputs/apk/debug/*.apk
