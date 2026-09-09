@@ -3,10 +3,15 @@ workflows:
     name: FriendsSoft SMS Server
     max_build_duration: 60
     instance_type: mac_mini_m2
+
     scripts:
       - name: Set Android SDK location
-        script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+
       - name: Build APK
-        script: gradle assembleDebug
+        script: |
+          gradle :app:assembleDebug
+
     artifacts:
       - app/build/outputs/apk/debug/*.apk
