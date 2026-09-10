@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="#F4F7FB">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingLeft="18dp" android:paddingRight="18dp" android:paddingTop="20dp" android:paddingBottom="24dp">
+
+        <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/friendssoft_logo" android:contentDescription="FriendsSoft" android:scaleType="fitCenter" android:layout_width="112dp" android:layout_height="112dp"/>
+            <TextView android:text="FriendsSoft SMS Server" android:textColor="#102A43" android:textSize="25sp" android:textStyle="bold" android:gravity="center" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:text="Secure SMS gateway for FriendsSoft School Management" android:textColor="#66788A" android:textSize="13sp" android:gravity="center" android:layout_marginTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:background="@drawable/bg_status">
+            <LinearLayout android:orientation="horizontal" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="●" android:textColor="#20A05A" android:textSize="20sp" android:layout_width="28dp" android:layout_height="wrap_content"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:text="SERVER STATUS" android:textColor="#58706A" android:textSize="11sp" android:textStyle="bold" android:letterSpacing="0.08" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/status" android:text="Server stopped" android:textColor="#123B2A" android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="2dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/bg_card">
+            <TextView android:text="Server Configuration" android:textColor="#102A43" android:textSize="18sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:text="Set the local port used by FriendsSoft." android:textColor="#718096" android:textSize="13sp" android:layout_marginTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:text="PORT" android:textColor="#52667A" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/port" android:inputType="number" android:text="3000" android:textColor="#102A43" android:textSize="16sp" android:background="@drawable/bg_input" android:singleLine="true" android:layout_marginTop="6dp" android:layout_width="match_parent" android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" android:weightSum="2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+            <Button android:id="@+id/start" android:text="START SERVER" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="14sp" android:background="@drawable/bg_primary_button" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_marginRight="6dp"/>
+            <Button android:id="@+id/stop" android:text="STOP SERVER" android:textColor="#18324A" android:textStyle="bold" android:textSize="14sp" android:background="@drawable/bg_secondary_button" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_marginLeft="6dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/bg_card">
+            <TextView android:text="Connection Information" android:textColor="#102A43" android:textSize="18sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:text="Keep the phone and computer on the same Wi-Fi network." android:textColor="#718096" android:textSize="13sp" android:layout_marginTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:text="API ENDPOINTS" android:textColor="#52667A" android:textSize="11sp" android:textStyle="bold" android:layout_marginTop="15dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:text="POST  /v1/sms\nPOST  /send-message\nPOST  /sms" android:textColor="#23415B" android:textSize="14sp" android:fontFamily="monospace" android:layout_marginTop="6dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:text="SMS permission must be Allowed in Android settings." android:textColor="#7A5A00" android:textSize="12sp" android:layout_marginTop="14dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView android:text="FriendsSoft Software Solutions  •  SMS Gateway" android:textColor="#8A99A8" android:textSize="11sp" android:gravity="center" android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
